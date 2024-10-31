@@ -1,0 +1,9 @@
+@KasaSmartPlugAPI_HostAddress = http://localhost:5001
+
+GET {{KasaSmartPlugAPI_HostAddress}}/api/kasaplug/turnon
+Accept: application/json
+
+GET {{KasaSmartPlugAPI_HostAddress}}/api/kasaplug/turnoff
+Accept: application/json
+
+###
