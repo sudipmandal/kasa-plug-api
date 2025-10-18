@@ -1,6 +1,6 @@
-# Kasa Plug API
+# TP Link - Kasa Plug Rest API
 
-A simple REST API wrapper around TP-Link Kasa smart plug to enable turning it on or off. This repository provides the backend logic, HTTP endpoints, and Docker support to run it in a container.
+A simple REST API wrapper around TP-Link Kasa smart plug to enable turning it on or off over LAN. This repository provides the backend logic, HTTP endpoints, and Docker support to run it in a container.
 
 ## Table of Contents
 
