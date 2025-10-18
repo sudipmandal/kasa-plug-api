@@ -92,15 +92,15 @@ services:
 
 *(Note: The following are illustrative; consult the source code for accurate routes and payloads.)*
 
-| HTTP Method | Endpoint               | Description                        | Payload / Query Params                |
-|-------------|-------------------------|------------------------------------|----------------------------------------|
-| `POST`      | `/api/plugs/on`         | Turn one plug on                   | JSON: `{ "ip": "192.168.1.100" }`     |
-| `POST`      | `/api/plugs/off`        | Turn one plug off                  | JSON: `{ "ip": "192.168.1.100" }`     |
+| HTTP Method | Endpoint               | Description                        |
+|-------------|-------------------------|------------------------------------|
+| `GET`      | `/api/KasaPlug/turnon`         | Turn the plug on                   | 
+| `GET`      | `/api/KasaPlug/turnoff`        | Turn the plug off                  | 
 
 ### Example using `curl`
 
 ```bash
-curl -X POST http://localhost:8080/api/plugs/on     -H "Content-Type: application/json"     -d '{"ip":"192.168.1.100"}'
+curl -X GET http://localhost:8080/api/plugs/on     -H "Content-Type: application/json"
 ```
 
 ## Troubleshooting & Tips
