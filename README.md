@@ -78,6 +78,7 @@ The repository includes a **Dockerfile** to containerize the application. Here i
 1. Build the Docker image:
 
    ```bash
+   git clone https://github.com/sudipmandal/kasa-plug-api
    docker build -t kasa-plug-api .
    ```
 
