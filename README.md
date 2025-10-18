@@ -63,14 +63,13 @@ This command looks for the `Dockerfile` in the current directory and tags the bu
 Once built, you can deploy the container with Docker:
 
 ```bash
-docker run -d   --name kasa-plug-api   -e PLUG_API=192.168.1.100  -p 8080:80   kasa-plug-api
+docker run -d   --name kasa-plug-api   -e PLUG_API=192.168.1.100  -p 8080:8080   kasa-plug-api
 ```
 
 - `-d` puts the container in detached/background mode.  
-- `-e` is used to pass environment variables (e.g. config / credentials).  
-- `-p 8080:80` maps host port 8080 to container port 80 (adjust depending on the app’s listening port).  
-- You might also mount a config file or secret via `-v` if needed.  
-- Use `docker logs kasa-plug-api` to see the startup logs or any errors.
+- `-e` is used to pass environment variables  
+- `-p 8080:8080` maps host port 8080 to container port 8080 (adjust depending on the host’s listening port).  
+
 
 You can also orchestrate using Docker Compose or Kubernetes if needed.
 
@@ -100,7 +99,7 @@ services:
 ### Example using `curl`
 
 ```bash
-curl -X GET http://localhost:8080/api/plugs/on     -H "Content-Type: application/json"
+curl -X GET http://localhost:8080/api/KasaPlug/turnon  -H "Content-Type: application/json"
 ```
 
 ## Troubleshooting & Tips
